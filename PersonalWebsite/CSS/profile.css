@@ -1,0 +1,320 @@
+﻿/* ==========================================================================
+   STUDENT PROFILE & DASHBOARD STYLING
+   Theme: Modern Cyber Dark & Glassmorphism
+   ========================================================================== */
+
+/* 1. Global Reset & Base Layout */
+body {
+    background-color: #0b132b;
+    color: #e0e6ed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b132b;
+}
+::-webkit-scrollbar-thumb {
+    background: #1c2541;
+    border-radius: 4px;
+    border: 1px solid #3a506b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64ffda;
+}
+
+/* 2. Navigation Bar */
+.custom-navbar {
+    background: rgba(11, 19, 43, 0.85) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(58, 80, 107, 0.4);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.brand-logo {
+    color: #ffffff !important;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.logo-accent {
+    color: #64ffda;
+}
+
+.nav-btn {
+    color: #e0e6ed !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 14px !important;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+    color: #64ffda !important;
+    background: rgba(100, 255, 218, 0.08);
+}
+
+/* 3. Hero / Header Section */
+.hero-section {
+    padding-top: 130px;
+    padding-bottom: 70px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: #3a506b;
+}
+
+.typing-container {
+    color: #64ffda;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+}
+
+/* Avatar styling compatible with both .profile-avatar and .hero-profile-img */
+.profile-avatar,
+.hero-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #64ffda;
+    box-shadow: 0 0 25px rgba(100, 255, 218, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img-wrapper:hover .hero-profile-img,
+.hero-img-wrapper:hover .profile-avatar {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(100, 255, 218, 0.4);
+}
+
+/* 4. Cards & Container Structures */
+.profile-container {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #64ffda;
+    border-radius: 2px;
+}
+
+.profile-card,
+.custom-card {
+    background: #1c2541;
+    border: 1px solid #3a506b;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover,
+.custom-card:hover {
+    border-color: rgba(100, 255, 218, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* 5. Badges & Role Tags */
+.badge-role {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.skill-badge-item,
+.skill-badge {
+    background: #0b132b;
+    color: #64ffda;
+    border: 1px solid #3a506b;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.skill-badge-item:hover,
+.skill-badge:hover {
+    background: rgba(100, 255, 218, 0.12);
+    border-color: #64ffda;
+    transform: translateY(-2px);
+}
+
+/* 6. Hobbies & Interest Boxes */
+.hobby-box,
+.hobby-item {
+    background: #0b132b;
+    border-radius: 10px;
+    padding: 12px 18px;
+    border: 1px solid #3a506b;
+    transition: all 0.25s ease;
+}
+
+.hobby-box:hover,
+.hobby-item:hover {
+    border-color: #64ffda;
+    background: rgba(28, 37, 65, 0.6);
+}
+
+.hobby-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* 7. Timeline / Education Section */
+.timeline-list {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.timeline-item {
+    border-left: 2px solid #64ffda;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #64ffda;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #64ffda;
+}
+
+/* 8. Buttons & Controls */
+.btn-primary-custom {
+    background-color: #64ffda;
+    color: #0b132b;
+    border: 1px solid #64ffda;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #4cd3b2;
+    border-color: #4cd3b2;
+    color: #0b132b;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: #64ffda;
+    border: 1px solid #3a506b;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    border-color: #64ffda;
+    color: #64ffda;
+}
+
+/* 9. Form Inputs & Modals */
+.modal-content {
+    background: #1c2541 !important;
+    border: 1px solid #3a506b !important;
+    border-radius: 14px !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.form-control, 
+.form-select {
+    background-color: #0b132b !important;
+    color: #e0e6ed !important;
+    border: 1px solid #3a506b !important;
+    border-radius: 8px !important;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #64ffda !important;
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.15) !important;
+}
+
+/* 10. Footer Section */
+.custom-footer {
+    background: #070c1b;
+    border-top: 1px solid #1c2541;
+    margin-top: 60px;
+}
+
+.btn-back-to-top {
+    color: #64ffda;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.btn-back-to-top:hover {
+    color: #ffffff;
+}

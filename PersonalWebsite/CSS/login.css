@@ -1,0 +1,66 @@
+﻿/* ==========================================
+   LOGIN PAGE SPECIFIC STYLING (TWO-COLUMN)
+   ========================================== */
+
+/* Main Section Wrapper */
+.login-section {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+
+/* Left Side Welcome Elements */
+.bg-outline-cyan {
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.feature-icon-box {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Right Side Card Wrapper */
+.login-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* Input Icon Group Styling */
+.input-group-text {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    border-right: none !important;
+    color: #38bdf8 !important;
+}
+
+.input-group .form-control {
+    border-left: none !important;
+}
+
+.input-group .form-control:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: none !important;
+}

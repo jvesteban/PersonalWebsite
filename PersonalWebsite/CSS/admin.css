@@ -1,0 +1,65 @@
+﻿/* ==========================================
+   ADMIN DASHBOARD SPECIFIC STYLING
+   ========================================== */
+
+/* Layout & Spacing */
+.admin-container {
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+/* Custom Metric Cards (Statistics Overview) */
+.card-metric {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-metric:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* User Management Table Customization */
+.table-custom {
+    color: #e2e8f0;
+}
+
+.table-custom thead th {
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #334155;
+    padding: 12px 16px;
+}
+
+.table-custom tbody tr {
+    border-bottom: 1px solid #334155;
+    transition: background-color 0.2s ease;
+}
+
+.table-custom tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.04);
+}
+
+.table-custom td {
+    padding: 14px 16px;
+}
+
+/* Admin Action Buttons */
+.btn-admin-action {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Section Header Badges */
+.admin-badge-stat {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
