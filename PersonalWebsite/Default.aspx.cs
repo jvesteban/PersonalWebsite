@@ -10,8 +10,25 @@ namespace PersonalWebsite
         {
             if (!IsPostBack)
             {
-                // Wala nang session checking dito dahil standalone portfolio page na ito
+                // Ibinalik ang Session Checking para sa Login/Logout controls
+                if (Session["UserID"] != null)
+                {
+                    pnlGuestNav.Visible = false;
+                    pnlUserNav.Visible = true;
+                }
+                else
+                {
+                    pnlGuestNav.Visible = true;
+                    pnlUserNav.Visible = false;
+                }
             }
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnSend_Click(object sender, EventArgs e)

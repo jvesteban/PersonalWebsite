@@ -31,14 +31,30 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav align-items-center">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link nav-btn" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link nav-btn" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link nav-btn" href="#education">Education</a></li>
                         <li class="nav-item"><a class="nav-link nav-btn" href="#skills">Skills & Hobbies</a></li>
                         <li class="nav-item"><a class="nav-link nav-btn" href="#contact">Contact</a></li>
                     </ul>
+
+                    <!-- Navigation User Action Controls (IBINALIK ANG GUESTS & USER PANELS) -->
+                    <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0 ms-lg-4">
+                        <asp:Panel ID="pnlGuestNav" runat="server" Visible="true">
+                            <a href="Account/Login.aspx" class="btn btn-login-nav">
+                                <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+                            </a>
+                        </asp:Panel>
+
+                        <asp:Panel ID="pnlUserNav" runat="server" Visible="false" CssClass="d-flex align-items-center gap-2">
+                            <a href="Student/Profile.aspx" class="btn btn-outline-info btn-sm">
+                                <i class="bi bi-person-circle me-1"></i> My Profile
+                            </a>
+                            <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CssClass="btn btn-outline-danger btn-sm" CausesValidation="false" />
+                        </asp:Panel>
+                    </div>
                 </div>
             </div>
         </nav>

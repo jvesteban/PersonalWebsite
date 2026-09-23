@@ -81,7 +81,6 @@
     <Content Include="Image\1x1.png" />
     <Content Include="Image\1x11.jpg" />
     <Content Include="Image\ninja.jpg" />
-    <Content Include="Image\pic1.png" />
     <Content Include="Image\qculogo.png" />
     <Content Include="Image\rlsneslogo.png" />
     <Content Include="Image\sgeslogo.png" />
@@ -138,6 +137,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\PersonalWebsite20260923180921 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\PersonalWebsite20260923180921 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\PersonalWebsite20260923180921 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\PersonalWebsite20260923180921 - Web Deploy1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
